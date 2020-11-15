@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  NewsFeed
+
+  Created by Bunny Bhargav on 23/10/20.
+  Copyright © 2020 Bunny Bhargav. All rights reserved.
+*/
+
+
+"Title" = "Titre";
+"Author" = "Auteure";
+"Description" = "Le Description";
