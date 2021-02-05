@@ -13,6 +13,8 @@
 		281BA8E32542222900D85DD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281BA8E12542222900D85DD4 /* LaunchScreen.storyboard */; };
 		281BA8ED25422A0700D85DD4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA8EA25422A0600D85DD4 /* NetworkService.swift */; };
 		281BA8EE25422A0700D85DD4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BA8EB25422A0600D85DD4 /* Constants.swift */; };
+		2837125025CD16D600D2BFFB /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 2837124F25CD16D600D2BFFB /* ReadMe */; };
+		2837125325CD194000D2BFFB /* NewsRendererVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837125225CD194000D2BFFB /* NewsRendererVC.swift */; };
 		2859BE6D2542A4FD00CA2CED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2859BE6C2542A4FD00CA2CED /* Extensions.swift */; };
 		2859BE7D2542B75600CA2CED /* NewsItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2859BE7C2542B75600CA2CED /* NewsItemCell.xib */; };
 		2859BE8E2542C32300CA2CED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2859BE902542C32300CA2CED /* Localizable.strings */; };
@@ -36,6 +38,8 @@
 		281BA8E42542222900D85DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		281BA8EA25422A0600D85DD4 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		281BA8EB25422A0600D85DD4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2837124F25CD16D600D2BFFB /* ReadMe */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
+		2837125225CD194000D2BFFB /* NewsRendererVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRendererVC.swift; sourceTree = "<group>"; };
 		2859BE6C2542A4FD00CA2CED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2859BE7C2542B75600CA2CED /* NewsItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsItemCell.xib; sourceTree = "<group>"; };
 		2859BE812542C19B00CA2CED /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		281BA8CA2542222100D85DD4 = {
 			isa = PBXGroup;
 			children = (
+				2837124F25CD16D600D2BFFB /* ReadMe */,
 				281BA8D52542222100D85DD4 /* NewsFeed */,
 				281BA8D42542222100D85DD4 /* Products */,
 			);
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				286F3A5C2550539A00C05B9C /* NewsFeedVIPscene */,
+				2837125125CD18EA00D2BFFB /* NewsRenderer */,
 				286F3A5B2550508000C05B9C /* SupportingFiles */,
 				28515BD425480FB80042132A /* Localization */,
 				28515BD325480EC10042132A /* Service */,
@@ -91,6 +97,14 @@
 				281BA8E42542222900D85DD4 /* Info.plist */,
 			);
 			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		2837125125CD18EA00D2BFFB /* NewsRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				2837125225CD194000D2BFFB /* NewsRendererVC.swift */,
+			);
+			path = NewsRenderer;
 			sourceTree = "<group>";
 		};
 		28515BCD254800010042132A /* View */ = {
@@ -237,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2837125025CD16D600D2BFFB /* ReadMe in Resources */,
 				2859BE8E2542C32300CA2CED /* Localizable.strings in Resources */,
 				281BA8E32542222900D85DD4 /* LaunchScreen.storyboard in Resources */,
 				2859BE7D2542B75600CA2CED /* NewsItemCell.xib in Resources */,
@@ -258,6 +273,7 @@
 				281BA8D72542222100D85DD4 /* AppDelegate.swift in Sources */,
 				281BA8ED25422A0700D85DD4 /* NetworkService.swift in Sources */,
 				286F3A5A2550504500C05B9C /* CachingImgView.swift in Sources */,
+				2837125325CD194000D2BFFB /* NewsRendererVC.swift in Sources */,
 				2865A424254FEA030062B21F /* NewsFeedWorker.swift in Sources */,
 				2865A425254FEA030062B21F /* NewsFeedRouter.swift in Sources */,
 				281BA8D92542222100D85DD4 /* SceneDelegate.swift in Sources */,

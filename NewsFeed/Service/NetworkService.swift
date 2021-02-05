@@ -12,7 +12,7 @@ import Foundation
 
 class APIService
 {
-    class func getDataFromEndpoint(urlString u_str: URL, completion: @escaping (Error?, Data?) ->  Void)
+     func getDataFromEndpoint(urlString u_str: URL, completion: @escaping (Error?, Data?) ->  Void)
     {
         let task = URLSession.shared.dataTask(with: u_str) { (data, response, error) in
             if let err = error

@@ -32,13 +32,13 @@ class NewsItemCell: UITableViewCell, ConfigurableCell {
    
     self.newsItem = item
         self.titleTxtLabel.text = "Title".localizedString()
-        self.authorTxtLbl.text = "Author".localizedString()
+        self.authorTxtLbl.text = "Date".localizedString()
         self.descriptionTxtLbl.text = "Description".localizedString()
     guard let newItem = newsItem else {return}
     self.titleValueLbl.text = newItem.title
-    if let author = newItem.author, author != ""
+    if let author = newItem.date, author != ""
     {
-    self.authorValueLbl.text = author
+    self.authorValueLbl.text = author.toDate()
     self.authorValueLbl.isHidden = false
     }
     self.descriptionValueLbl.text = newItem.description

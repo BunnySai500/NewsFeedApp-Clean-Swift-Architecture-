@@ -6,13 +6,13 @@ class NewsFeedServiceWorker: NSObject
 {
     var totalItems: Int = 0
     var nextPage: Int = 1
-    var chunk: Int = 5
+    var chunk: Int = 10
+    private lazy var apiService = APIService()
     var currentlyLoading: Bool = false
     func loadMoreFeed(completion: @escaping ([NewsFeed.NewsFeedItem]) -> Void) {
     guard let feedLink = URL(string: APIEndPoints.returnFeedLink(forpageSize: chunk, andId: nextPage)) else {return}
-    print(feedLink)
     currentlyLoading = true
-    APIService.getDataFromEndpoint(urlString: feedLink) { (error, data) in
+    apiService.getDataFromEndpoint(urlString: feedLink) { (error, data) in
     if let err = error {print(err)}
         if let feedData = data
     {

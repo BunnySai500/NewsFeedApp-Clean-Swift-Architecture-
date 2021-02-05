@@ -7,8 +7,10 @@ class NewsFeedDataSource: NSObject {
     private var service_Worker: NewsFeedServiceWorker?
     private var table: UITableView?
     private var newsItems: [NewsFeed.NewsFeedItem] = []
-    init(_ table : UITableView) {
+    var selectionUpdate: (NewsFeed.NewsFeedItem) -> Void
+    init(_ table : UITableView, selUp: @escaping (NewsFeed.NewsFeedItem) -> Void) {
         self.table = table
+        self.selectionUpdate = selUp
         super.init()
         service_Worker = NewsFeedServiceWorker()
         registerCells()
@@ -45,7 +47,10 @@ extension NewsFeedDataSource: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return newsItems.count
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let selIt = newsItems[indexPath.row]
+    selectionUpdate(selIt)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsItemCell.reuseId, for: indexPath)
         let item = newsItems[indexPath.row]

@@ -17,7 +17,7 @@ class CustomCacheImageView: UIImageView {
         self.image = cachedImage
         return
         }
-    APIService.getDataFromEndpoint(urlString: imageLink) { (error, data) in
+    APIService().getDataFromEndpoint(urlString: imageLink) { (error, data) in
         if let err = error{
         print(err)
         return}

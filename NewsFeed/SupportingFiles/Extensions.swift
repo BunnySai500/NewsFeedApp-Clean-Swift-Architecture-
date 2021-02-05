@@ -22,6 +22,14 @@ extension String: Localizable {
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
+    func toDate() -> String?
+    {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+
+    let date = formatter.date(from: self)
+    return formatter.string(from: date ?? Date())
+    }
 }
 
 extension UILabel: XIBLocalizable {
@@ -45,3 +53,6 @@ extension String{
     }
     
 }
+
+
+ 

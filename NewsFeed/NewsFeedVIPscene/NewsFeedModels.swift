@@ -8,13 +8,16 @@ enum NewsFeed
     struct NewsFeedItem: Decodable {
         var id = UUID().uuidString
         var title: String?
-        var author: String?
+        var date: String?
         var imageLink: String?
         var description: String?
+        var newsLink: String?
         
         enum CodingKeys: String, CodingKey {
-            case title, author, description
+            case title, description
             case imageLink = "urlToImage"
+            case date = "publishedAt"
+            case newsLink = "url"
         }
     }
     struct NewsFeedList: Decodable {

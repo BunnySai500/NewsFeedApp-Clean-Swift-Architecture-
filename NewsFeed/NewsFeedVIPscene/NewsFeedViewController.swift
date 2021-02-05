@@ -28,7 +28,10 @@ class NewsFeedViewController: UITableViewController, NewsFeedDisplayLogic
     presenter.viewController = viewController
     interactor.presenter = presenter
     router.viewController = viewController
-     let dataSource = NewsFeedDataSource(self.tableView)
+    let dataSource = NewsFeedDataSource(self.tableView, selUp: { [weak self] item in
+        guard let strSel = self, let ro = strSel.router else{return}
+        ro.presentNews(ofItem: item)
+    })
     self.newsFeedDataSource = dataSource
     viewController.tableView.delegate = dataSource
     viewController.tableView.dataSource = dataSource
